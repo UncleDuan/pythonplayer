@@ -12,7 +12,7 @@ email<br>
 os<br>
 MIMEText,这个在email.mime.text里面<br>
 
-###1.提取最新邮件
+# # # 1.提取最新邮件
 先连接到到pop服务器：
 ```python
 def pop_connect(self):
@@ -31,7 +31,7 @@ def pop_connect(self):
         topemail = self.reademail.top(self.allemail[0], 0)
 ```
 提取标题信息
-###2.根据信息解析出指令，利用os模块设置指令
+# # # 2.根据信息解析出指令，利用os模块设置指令
 ```python
 #延时关机
 command = 'shutdown -s -t ' + sd_time
@@ -39,7 +39,7 @@ command = 'shutdown -s -t ' + sd_time
 command = 'schtasks /create /TN %s /ST %s /sc DAILY /TR "shutdown /s"' %(sd_type, sd_time) 
 os.system(command)
 ```
-###3.再自动发邮件覆盖指令，否则会重复检测到统一指令
+# # # 3.再自动发邮件覆盖指令，否则会重复检测到统一指令
 连接到SMTP服务器：
 ```python
 def smtp_connect(self):
