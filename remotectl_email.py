@@ -6,7 +6,7 @@ import poplib
 import time
 import os
 ADDR = '1280354657@qq.com'
-PASSWORD = 'opfvbiujenrygjbb'
+PASSWORD = '################'
 FROM_ADDR = '1280354657@qq.com'   
 POP_SERVER = 'pop.qq.com'
 SMTP_SERVER = 'smtp.qq.com'
