@@ -1,0 +1,23 @@
+# wechat_msg
+——通过百度天气API获取天气，使用wxpy发送消息到手机上<br>
+主要是学习wxpy和requests模块<br>
+
+1.百度天气API："http://api.map.baidu.com/telematics/v3/weather?location=%s&output=json&ak=TueGDhCvwI6fOrQnLM0qmXxY9N0OkOiQ&callback=? "<br>
+用requests模块从天气API获取json格式的天气信息：<br>
+```python
+    url = path % location
+    response = requests.get(url)
+    result = response.json()
+```
+从json文件解析出需要的信息，得到想要格式的输出str<br>
+location可以直接是对应的省份<br>
+2.使用wxpy模块发送消息<br>
+wxpy模拟的是网页微信，会显示网页端在线<br>
+```python
+    bot = Bot(cache_path=True)
+    friend=bot.friends().search("{微信搜索框}")[0]
+    friend.send("Hello")
+    #发送成功通知我
+    bot.file_helper.send(send_weather( "微信 "))
+    bot.file_helper.send( "发送完毕 ")
+```

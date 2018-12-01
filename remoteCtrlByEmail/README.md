@@ -1,5 +1,5 @@
-#感谢大白学Python
-# remotectl_email
+
+# remotectrlbyemail
 remote shoudown computer by monitoring email.<br>
 用到的模块:<br>
 smtplib：<br>
@@ -63,3 +63,4 @@ def send_email(self):
 ```
 
 ps：注意邮箱要开通POP3/SMTP服务，有一个授权码
+#### 感谢微信公众号：大白学Python
